@@ -1,7 +1,7 @@
 <h3>Second Largest Element In an array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTQ4NDk1"></a>Article</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4NzQ%3D"></a>Video</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735"></a>Problem</h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTQ4NDk1">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4NzQ%3D">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem🚀</a></h3>
 
 ```java
 class Solution {
@@ -21,9 +21,9 @@ class Solution {
 ```
 
 <h3>Second Largest Element In an array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTIzNDkz"></a>Article</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTY%3D"></a>Video/h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/move-all-zeroes-to-end-of-array0751"></a>Problem</h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTIzNDkz">Article</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTY%3D">Video</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/move-all-zeroes-to-end-of-array0751">Problem🚀</a></h3>
 
 ```java
 class Solution {
@@ -44,9 +44,9 @@ class Solution {
 ```
 
 <h3>Array Reverse</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjU2Nw%3D%3D"></a>Article</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTc%3D"></a>Video/h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/reverse-an-array"></a>Problem</h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjU2Nw%3D%3D">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTc%3D">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/reverse-an-array">Problem🚀</a></h3>
 
 ```java
 class Solution {
@@ -72,9 +72,9 @@ class Solution {
 ```
 
 <h3>Rotate Array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjM5OA%3D%3D"></a>Article</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTg%3D"></a>Video/h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/rotate-array-by-n-elements-1587115621"></a>Problem</h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjM5OA%3D%3D">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTg%3D">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/rotate-array-by-n-elements-1587115621">Problem🚀</a></h3>
 
 ```java
 
@@ -114,9 +114,9 @@ class Solution {
 ```
 <!-- Problem 5 -->
 <h3>Next Permutation</h3>
-<h3><a href=""></a>Article</h3>
-<h3><a href=""></a>Video/h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226"></a>Problem</h3>
+<h3><a href="">Article🚀</a></h3>
+<h3><a href="">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226">Problem🚀</a></h3>
 
 ```java
 class Solution {
