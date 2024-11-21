@@ -171,8 +171,8 @@ class Solution {
 
 <!-- Problem 6-->
 <h3>Majority Element II</h3>
-<h3><a href="">Article🚀</a></h3>
-<h3><a href="">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/NDkxMDM3">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNDE%3D">Video🚀</a></h3>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/majority-vote">Problem🚀</a></h3>
 
 ```js
