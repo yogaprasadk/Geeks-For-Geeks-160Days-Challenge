@@ -264,3 +264,39 @@ class Solution {
     }
 }
 ```
+<!-- solution 8 -->
+<h3>Stock buy and sell </h3>
+<h3><a href="">Article🚀</a></h3>
+<h3><a href="">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2">Problem🚀</a></h3>
+
+```java
+class Solution {
+    public int maximumProfit(int prices[]) {
+        if (prices == null || prices.length <= 1) {
+            return 0;
+        }
+
+        int minPrice = Integer.MAX_VALUE;  // Initialize minPrice to a very large value
+        int maxProfit = 0;  // Initialize maxProfit to 0
+
+        // Traverse through the prices array
+        for (int i = 0; i < prices.length; i++) {
+            // Update the minimum price encountered so far
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];
+            }
+            // Calculate profit if we sold at the current price
+            int profit = prices[i] - minPrice;
+            // Update the maximum profit
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
+        }
+
+        // Return the maximum profit that can be made
+        return maxProfit;
+    }
+}
+```
+
