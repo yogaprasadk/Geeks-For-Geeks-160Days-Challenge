@@ -242,8 +242,8 @@ class Solution {
 ```
 <!-- Solution 7-->
 <h3>Stock buy and sell </h3>
-<h3><a href="">Article🚀</a></h3>
-<h3><a href="">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTE2Mjgz">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNDA%3D">Video🚀</a></h3>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/stock-buy-and-sell2615">Problem🚀</a></h3>
 
 ```js
@@ -266,8 +266,8 @@ class Solution {
 ```
 <!-- solution 8 -->
 <h3>Stock buy and sell </h3>
-<h3><a href="">Article🚀</a></h3>
-<h3><a href="">Video🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/NTExNTc0">Article🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNzc%3D">Video🚀</a></h3>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2">Problem🚀</a></h3>
 
 ```java
@@ -300,3 +300,32 @@ class Solution {
 }
 ```
 
+<!-- Solution 9-->
+```js
+int n = arr.length;
+        Arrays.sort(arr);
+
+        // If we increase all heights by k or decrease all
+        // heights by k, the result will be arr[n - 1] - arr[0]
+        int res = arr[n - 1] - arr[0];
+
+        // For all indices i, increment arr[0...i-1] by k and
+        // decrement arr[i...n-1] by k
+        for (int i = 1; i < arr.length; i++) {
+
+            // Impossible to decrement height of ith tower by k, 
+            // continue to the next tower
+            if (arr[i] - k < 0)
+                continue;
+
+            // Minimum height after modification
+            int minH = Math.min(arr[0] + k, arr[i] - k);
+
+            // Maximum height after modification
+            int maxH = Math.max(arr[i - 1] + k, arr[n - 1] - k);
+
+            // Store the minimum difference as result
+            res = Math.min(res, maxH - minH);
+        }
+        return res;
+```
