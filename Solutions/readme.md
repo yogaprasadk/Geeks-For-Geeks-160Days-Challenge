@@ -329,3 +329,29 @@ int n = arr.length;
         }
         return res;
 ```
+
+<!-- Solution 10-->
+```java
+class Solution {
+
+    // arr: input array
+    // Function to find the sum of contiguous subarray with maximum sum.
+    int maxSubarraySum(int[] arr) {
+
+        int maxSoFar = Integer.MIN_VALUE;  // This will store the maximum sum found
+        int maxEndingHere = 0;             // This will store the sum of the subarray ending here
+
+        // Traverse the array
+        for (int i = 0; i < arr.length; i++) {
+            // Update maxEndingHere by including the current element
+            maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
+
+            // Update maxSoFar if maxEndingHere is greater
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        }
+
+        return maxSoFar;
+
+    }
+}
+```
