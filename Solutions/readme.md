@@ -1,7 +1,5 @@
-<h3>Second Largest Element In an array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTQ4NDk1">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4NzQ%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem🚀</a></h3>
+<h1>Array</h1>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem 1</a></h3>
 
 ```java
 class Solution {
@@ -19,11 +17,7 @@ class Solution {
     }
 }
 ```
-
-<h3>Second Largest Element In an array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTIzNDkz">Article</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTY%3D">Video</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/move-all-zeroes-to-end-of-array0751">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/move-all-zeroes-to-end-of-array0751">Problem 2</a></h3>
 
 ```java
 class Solution {
@@ -42,11 +36,7 @@ class Solution {
 }
 
 ```
-
-<h3>Array Reverse</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjU2Nw%3D%3D">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTc%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/reverse-an-array">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/reverse-an-array">Problem 3</a></h3>
 
 ```java
 class Solution {
@@ -71,10 +61,7 @@ class Solution {
 }
 ```
 
-<h3>Rotate Array</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MjM5OA%3D%3D">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/Mjc4OTg%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/rotate-array-by-n-elements-1587115621">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/rotate-array-by-n-elements-1587115621">Problem 4</a></h3>
 
 ```java
 
@@ -113,10 +100,7 @@ class Solution {
 }}
 ```
 <!-- Problem 5 -->
-<h3>Next Permutation</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/ODc2MzQw">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwMjI%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226">Problem 5</a></h3>
 
 ```java
 class Solution {
@@ -170,10 +154,7 @@ class Solution {
 ```
 
 <!-- Problem 6-->
-<h3>Majority Element II</h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/NDkxMDM3">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNDE%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/majority-vote">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/majority-vote">Problem 6</a></h3>
 
 ```js
 class Solution {
@@ -241,10 +222,7 @@ class Solution {
 }
 ```
 <!-- Solution 7-->
-<h3>Stock buy and sell </h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/MTE2Mjgz">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNDA%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/stock-buy-and-sell2615">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/stock-buy-and-sell2615">Problem 7</a></h3>
 
 ```js
 class Solution {
@@ -265,10 +243,7 @@ class Solution {
 }
 ```
 <!-- solution 8 -->
-<h3>Stock buy and sell </h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/article/NTExNTc0">Article🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/video/MjgwNzc%3D">Video🚀</a></h3>
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2">Problem🚀</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2">Problem 8</a></h3>
 
 ```java
 class Solution {
@@ -300,7 +275,9 @@ class Solution {
 }
 ```
 
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/minimize-the-heights3351">Problem 9</a></h3>
 <!-- Solution 9-->
+
 ```js
 int n = arr.length;
         Arrays.sort(arr);
@@ -331,6 +308,8 @@ int n = arr.length;
 ```
 
 <!-- Solution 10-->
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/kadanes-algorithm-1587115620">Problem 10</a></h3>
+
 ```java
 class Solution {
 
@@ -352,6 +331,226 @@ class Solution {
 
         return maxSoFar;
 
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/maximum-product-subarray3604">Problem 11</a></h3>
+
+```java
+lass Solution {
+    // Function to find maximum product subarray
+    int maxProduct(int[] arr) {
+         if (arr == null || arr.length == 0) return 0;
+
+        int max_product = arr[0];  // Initialize max_product to the first element
+        int min_product = arr[0];  // Initialize min_product to the first element
+        int result = arr[0];       // To store the final result
+
+        // Traverse through the array starting from the second element
+        for (int i = 1; i < arr.length; i++) {
+            // If the current element is negative, swap max_product and min_product
+            if (arr[i] < 0) {
+                int temp = max_product;
+                max_product = min_product;
+                min_product = temp;
+            }
+
+            // Update max_product and min_product
+            max_product = Math.max(arr[i], max_product * arr[i]);
+            min_product = Math.min(arr[i], min_product * arr[i]);
+
+            // Update the result with the maximum product found so far
+            result = Math.max(result, max_product);
+        }
+
+        return result;
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/max-circular-subarray-sum-1587115620">Problem 12</a>
+</h3>
+
+```js
+
+
+class Solution {
+
+    // a: input array
+    // n: size of array
+    // Function to find maximum circular subarray sum.
+    public int circularSubarraySum(int arr[]) {
+        int n = arr.length;
+        int suffixSum = arr[n - 1];
+
+        // maxSuffix array to store the value of 
+        // maximum suffix occurred so far.
+        int[] maxSuffix = new int[n + 1];
+        maxSuffix[n - 1] = arr[n - 1];
+
+        for(int i = n - 2; i >= 0; i--) {
+            suffixSum = suffixSum + arr[i];
+            maxSuffix[i] = Math.max(maxSuffix[i + 1], suffixSum);
+        }
+
+        // circularSum is Maximum sum of circular subarray
+        int circularSum = arr[0];
+
+        // normalSum is Maximum sum subarray considering 
+        // the array is non-circular
+        int normalSum = arr[0];
+
+        int currSum = 0;
+        int prefix = 0;
+
+        for(int i = 0; i < n; i++) {
+            
+            // Kadane's algorithm
+            currSum = Math.max(currSum + arr[i], arr[i]);
+            normalSum = Math.max(normalSum, currSum);
+          
+            // Calculating maximum Circular Sum
+            prefix = prefix + arr[i];
+            circularSum = Math.max(circularSum, prefix + maxSuffix[i + 1]);
+        }
+
+        return Math.max(circularSum, normalSum);
+
+        // Your code here
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/smallest-positive-missing-number-1587115621">Problem 13</a></h3>
+
+```js
+class Solution {
+    // Function to find the smallest positive number missing from the array.
+    public int missingNumber(int[] arr) {
+        // Your code here
+        int n = arr.length;
+
+        // To mark the occurrence of elements
+        boolean[] vis = new boolean[n];
+        for (int i = 0; i < n; i++) {
+
+            // if element is in range from 1 to n
+            // then mark it as visited
+            if (arr[i] > 0 && arr[i] <= n)
+                vis[arr[i] - 1] = true;
+        }
+
+        // Find the first element which is unvisited
+        // in the original array
+        for (int i = 1; i <= n; i++) {
+            if (!vis[i - 1]) {
+                return i;
+            }
+        }
+
+        // if all elements from 1 to n are visited
+        // then n+1 will be first positive missing number
+        return n + 1;
+    }
+}
+```
+
+<h1>String</h1>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/implement-atoi">Problem 1</a></h3>
+
+```java
+class Solution {
+    public int myAtoi(String s) {
+        // Your code here
+         int sign = 1, res = 0, idx = 0;
+
+        // Ignore leading whitespaces
+        while (idx < s.length() && s.charAt(idx) == ' ') {
+            idx++;
+        }
+
+        // Store the sign of number
+        if (idx < s.length() && (s.charAt(idx) == '-' 
+                                 || s.charAt(idx) == '+')) {
+            if (s.charAt(idx++) == '-') {
+                sign = -1;
+            }
+        }
+
+        // Construct the number digit by digit
+        while (idx < s.length() && s.charAt(idx) >= '0' 
+                                       && s.charAt(idx) <= '9') {
+            
+            // Handling overflow/underflow test case
+            if (res > Integer.MAX_VALUE / 10 || 
+                   (res == Integer.MAX_VALUE / 10 && s.charAt(idx) - '0' > 7)) {
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+          
+            // Append current digit to the result
+            res = 10 * res + (s.charAt(idx++) - '0');
+        }
+        return res * sign;
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/add-binary-strings3805">Problem 2</a></h3>
+
+```js
+lass Solution {
+    static String trimLeadingZeros(String s) {
+
+        // Find the position of the first '1'
+        int firstOne = s.indexOf('1');
+        return (firstOne == -1) ? "0"
+                                : s.substring(firstOne);
+    }
+    
+    public String addBinary(String s1, String s2) {
+        // code here
+        s1 = trimLeadingZeros(s1);
+        s2 = trimLeadingZeros(s2);
+        
+        int n = s1.length();
+        int m = s2.length();
+
+        // Swap the strings if s1 is of smaller length
+        if (n < m) {
+            return addBinary(s2, s1);
+        }
+
+        int j = m - 1;
+        int carry = 0;
+        StringBuilder result = new StringBuilder();
+
+        // Traverse both strings from the end
+        for (int i = n - 1; i >= 0; i--) {
+
+            // Current bit of s1
+            int bit1 = s1.charAt(i) - '0';
+            int sum = bit1 + carry;
+
+            // If there are remaining bits in s2, add them
+            // to the sum
+            if (j >= 0) {
+
+                // Current bit of s2
+                int bit2 = s2.charAt(j) - '0';
+                sum += bit2;
+                j--;
+            }
+
+            // Calculate the result bit and update carry
+            int bit = sum % 2;
+            carry = sum / 2;
+
+            // Update the current bit in result
+            result.append((char)(bit + '0'));
+        }
+
+        // If there's any carry left, update the result
+        if (carry > 0)
+            result.append('1');
+
+        return result.reverse().toString();
     }
 }
 ```
