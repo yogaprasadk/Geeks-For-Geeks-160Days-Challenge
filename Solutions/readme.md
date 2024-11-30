@@ -554,3 +554,32 @@ lass Solution {
     }
 }
 ```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/anagram-1587115620">Problem 2</a></h3>
+
+```java
+class Solution {
+    // Function is to check whether two strings are anagram of each other or not.
+    static final int MAX_CHAR = 26;
+    public static boolean areAnagrams(String s1, String s2) {
+
+        // Your code here
+        int[] freq = new int[MAX_CHAR];
+
+        // Count frequency of each character in string s1
+        for (int i = 0; i < s1.length(); i++)
+            freq[s1.charAt(i) - 'a']++;
+
+        // Count frequency of each character in string s2
+        for (int i = 0; i < s2.length(); i++)
+            freq[s2.charAt(i) - 'a']--;
+
+        // Check if all frequencies are zero
+        for (int count : freq) {
+            if (count != 0)
+                return false;
+        }
+
+        return true;
+    }
+}
+```
