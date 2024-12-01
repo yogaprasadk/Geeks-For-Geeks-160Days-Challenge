@@ -1,4 +1,4 @@
-<h1>Array</h1>
+![image](https://github.com/user-attachments/assets/4c04525d-d969-4911-b95c-5c34db5eabfe)<h1>Array</h1>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem 1</a></h3>
 
 ```java
@@ -580,6 +580,32 @@ class Solution {
         }
 
         return true;
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/non-repeating-character-1587115620">Problem 4</a></h3>
+
+```java
+class Solution {
+    // Function to find the first non-repeating character in a string
+    static final int MAX_CHAR = 26;
+    static char nonRepeatingChar(String s) {
+        // Your code here
+        int[] freq = new int[MAX_CHAR];
+
+        // Count the frequency of all characters
+        for (char c : s.toCharArray()) 
+            freq[c - 'a']++;
+
+        // Find the first character with frequency 1
+        for (int i = 0; i < s.length(); ++i) {
+            if (freq[s.charAt(i) - 'a'] == 1)
+                return s.charAt(i);
+        }
+    
+        // If no character with a frequency of 1 is 
+        // found, then return '$'
+        return '$';
     }
 }
 ```
