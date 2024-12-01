@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4c04525d-d969-4911-b95c-5c34db5eabfe)<h1>Array</h1>
+<h1>Array</h1>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem 1</a></h3>
 
 ```java
