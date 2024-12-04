@@ -554,7 +554,7 @@ lass Solution {
     }
 }
 ```
-<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/anagram-1587115620">Problem 2</a></h3>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/anagram-1587115620">Problem 3</a></h3>
 
 ```java
 class Solution {
@@ -606,6 +606,247 @@ class Solution {
         // If no character with a frequency of 1 is 
         // found, then return '$'
         return '$';
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/search-pattern0205">Problem 5</a></h3>
+
+```java
+class Solution {
+    
+    static void constructLps(String pat, int[] lps) {
+        
+        // len stores the length of longest prefix which 
+        // is also a suffix for the previous index
+        int len = 0;
+
+        // lps[0] is always 0
+        lps[0] = 0;
+
+        int i = 1;
+        while (i < pat.length()) {
+            
+            // If characters match, increment the size of lps
+            if (pat.charAt(i) == pat.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            }
+            
+            // If there is a mismatch
+            else {
+                if (len != 0) {
+                    
+                    // Update len to the previous lps value 
+                    // to avoid redundant comparisons
+                    len = lps[len - 1];
+                } 
+                else {
+                    
+                    // If no matching prefix found, set lps[i] to 0
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+    }
+    ArrayList<Integer> search(String pat, String txt) {
+        // your code here
+        
+        int n = txt.length();
+        int m = pat.length();
+
+        int[] lps = new int[m];
+        ArrayList<Integer> res = new ArrayList<>();
+
+        constructLps(pat, lps);
+
+        // Pointers i and j, for traversing 
+        // the text and pattern
+        int i = 0;
+        int j = 0;
+
+        while (i < n) {
+            // If characters match, move both pointers forward
+            if (txt.charAt(i) == pat.charAt(j)) {
+                i++;
+                j++;
+
+                // If the entire pattern is matched 
+                // store the start index in result
+                if (j == m) {
+                    res.add(i - j);
+                    
+                    // Use LPS of previous index to 
+                    // skip unnecessary comparisons
+                    j = lps[j - 1];
+                }
+            }
+            
+            // If there is a mismatch
+            else {
+                
+                // Use lps value of previous index
+                // to avoid redundant comparisons
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i++;
+            }
+        }
+        return res; 
+        
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/minimum-characters-to-be-added-at-front-to-make-string-palindrome">Problem 6</a></h3>
+
+```js
+class Solution {
+
+    static int[] computeLPSArray(String pat) {
+        int n = pat.length();
+        int[] lps = new int[n];
+
+        // lps[0] is always 0
+        lps[0] = 0;
+        int len = 0;
+
+        // loop calculates lps[i] for i = 1 to n-1
+        int i = 1;
+        while (i < n) {
+
+            // If the characters match, increment len
+            // and set lps[i]
+            if (pat.charAt(i) == pat.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            }
+
+            // If there is a mismatch
+            else {
+
+                // If len is not zero, update len to
+                // the last known prefix length
+                if (len != 0) {
+                    len = lps[len - 1];
+                }
+
+                // No prefix matches, set lps[i] to 0
+                else {
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+        return lps;
+    }
+
+    // Method returns minimum character to be added at
+    // front to make string palindrome
+    static int minChar(String s) {
+        int n = s.length();
+        String rev
+            = new StringBuilder(s).reverse().toString();
+
+        // Get concatenation of string, special character
+        // and reverse string
+        s = s + "$" + rev;
+
+        // Get LPS array of this concatenated string
+        int[] lps = computeLPSArray(s);
+
+        // By subtracting last entry of lps array from
+        // string length, we will get our result
+        return (n - lps[lps.length - 1]);
+    }
+}
+```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/string-gfg-160/problem/check-if-strings-are-rotations-of-each-other-or-not-1587115620">Problem 7</a></h3>
+
+```java
+class Solution {
+    // Function to check if two strings are rotations of each other or not.
+     static int[] computeLPSArray(String pat) {
+        int n = pat.length();
+        int[] lps = new int[n];
+      
+        // Length of the previous longest prefix suffix
+        int len = 0;
+
+        // lps[0] is always 0
+        lps[0] = 0;
+
+        // loop calculates lps[i] for i = 1 to n-1
+        int i = 1;
+        while (i < n) {
+          
+            // If the characters match, increment len 
+            // and extend the matching prefix
+            if (pat.charAt(i) == pat.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            }
+          
+            // If there is a mismatch
+            else {
+              
+                // If len is not zero, update len to
+                // last known prefix length
+                if (len != 0) {
+                    len = lps[len - 1];
+                }
+              
+                // No prefix matches, set lps[i] = 0
+                // and move to the next character
+                else {
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+        return lps;
+    }
+    public static boolean areRotations(String s1, String s2) {
+        // Your code here
+         String txt = s1 + s1;
+        String pat = s2;
+        
+        // search the pattern string s2 in the concatenation string 
+        int n = txt.length();
+        int m = pat.length();
+
+        // Create lps[] that will hold the longest prefix suffix
+        // values for pattern
+        int[] lps = computeLPSArray(pat);
+      
+        int i = 0; 
+        int j = 0;
+        while (i < n) {
+            if (pat.charAt(j) == txt.charAt(i)) {
+                j++;
+                i++;
+            }
+
+            if (j == m) {
+                return true;
+            }
+
+            // Mismatch after j matches
+            else if (i < n && pat.charAt(j) != txt.charAt(i)) {
+
+                // Do not match lps[0..lps[j-1]] characters,
+                // they will match anyway
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i = i + 1;
+            }
+        }
+        return false;
     }
 }
 ```
