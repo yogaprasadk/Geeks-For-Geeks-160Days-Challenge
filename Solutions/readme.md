@@ -850,3 +850,120 @@ class Solution {
     }
 }
 ```
+<h1>Sorting</h1>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/sort-an-array-of-0s-1s-and-2s4231">Problem 1</a></h3>
+
+```java
+class Solution {
+    // Function to sort an array of 0s, 1s, and 2s
+    public void sort012(int[] arr) {
+        // code here
+         int n = arr.length;
+        int lo = 0;
+        int hi = n - 1;
+        int mid = 0, temp = 0;
+
+        // Iterate till all the elements are sorted
+        while (mid <= hi) 
+        {
+            if (arr[mid] == 0) {
+                swap(arr, mid, lo);
+                lo++;
+                mid++;
+            }
+            else if (arr[mid] == 1) {
+                mid++;
+            }
+            else {
+                swap(arr, mid, hi);
+                hi--;
+            }
+        }
+    }
+    
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/find-h-index--165609">Problem 2</a></h3>
+
+```java
+class Solution {
+    // Function to find hIndex
+    public int hIndex(int[] citations) {
+        // code here
+        int n = citations.length;
+        int[] freq = new int[n + 1];
+
+        // Count the frequency of citations
+        for (int i = 0; i < n; i++) {
+            if (citations[i] >= n)
+                freq[n] += 1;
+            else
+                freq[citations[i]] += 1;
+        }
+
+        int idx = n;
+        
+        // Variable to keep track of the count of papers
+        // having at least idx citations
+        int s = freq[n]; 
+        while (s < idx) {
+            idx--;
+            s += freq[idx];
+        }
+        
+        // Return the largest index for which the count of 
+        // papers with at least idx citations becomes >= idx
+        return idx;
+    }
+}
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/inversion-of-array-1587115620">Problem 3</a></h3>
+
+```java
+ int n = arr.length; 
+        int invCount = 0;  
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+              
+                // If the current element is greater than the next,
+                // increment the count
+                if (arr[i] > arr[j])
+                    invCount++;
+            }
+        }
+        return invCount; 
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/overlapping-intervals--170633">Problem 4</a></h3>
+
+```java
+class Solution {
+    public List<int[]> mergeOverlap(int[][] arr) {
+        // Code here // Code here
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
+
+        // Step 2: Initialize a list to hold the merged intervals
+        List<int[]> merged = new ArrayList<>();
+
+        // Step 3: Iterate through the sorted intervals
+        for (int[] interval : arr) {
+            // If merged is empty or no overlap, simply add the interval
+            if (merged.isEmpty() || merged.get(merged.size() - 1)[1] < interval[0]) {
+                merged.add(interval);
+            } else {
+                // There is overlap, merge the current interval with the last merged one
+                int[] lastInterval = merged.get(merged.size() - 1);
+                lastInterval[1] = Math.max(lastInterval[1], interval[1]);
+            }
+        }
+
+        // Step 4: Return the merged intervals
+        return merged;
+    }
+}
+```
