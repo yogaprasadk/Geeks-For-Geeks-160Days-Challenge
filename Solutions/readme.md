@@ -967,3 +967,41 @@ class Solution {
     }
 }
 ```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/insert-interval-1666733333">Problem 5</a></h3>
+
+```java
+class Solution {
+    static ArrayList<int[]> insertInterval(int[][] intervals, int[] newInterval) {
+        // code here
+        ArrayList<int[]> result = new ArrayList<>();
+        
+        int i = 0;
+        int n = intervals.length;
+
+        // 1. Add all intervals that come before newInterval (no overlap).
+        while (i < n && intervals[i][1] < newInterval[0]) {
+            result.add(intervals[i]);
+            i++;
+        }
+
+        // 2. Merge all overlapping intervals with newInterval.
+        while (i < n && intervals[i][0] <= newInterval[1]) {
+            newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+            newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+            i++;
+        }
+        
+        // Add the merged newInterval.
+        result.add(newInterval);
+
+        // 3. Add the remaining intervals that come after newInterval.
+        while (i < n) {
+            result.add(intervals[i]);
+            i++;
+        }
+
+        return result;
+    }
+}
+```
