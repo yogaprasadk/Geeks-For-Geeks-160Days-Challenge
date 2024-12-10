@@ -1005,3 +1005,30 @@ class Solution {
     }
 }
 ```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/sorting-gfg-160/problem/non-overlapping-intervals">Problem 6</a></h3>
+
+```java
+class Solution {
+    static int minRemoval(int intervals[][]) {
+        // code here
+        Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
+        
+        // Step 2: Initialize variables
+        int end = intervals[0][1];  // End of the last added interval
+        int removals = 0;            // Number of intervals to remove
+        
+        // Step 3: Iterate through the intervals starting from the second one
+        for (int i = 1; i < intervals.length; i++) {
+            // If the current interval overlaps with the last added interval
+            if (intervals[i][0] < end) {
+                removals++;  // We need to remove the current interval
+            } else {
+                end = intervals[i][1];  // Update the last selected interval's end
+            }
+        }
+        
+        // Step 4: Return the minimum number of removals
+        return removals;
+    }
+}
+```
