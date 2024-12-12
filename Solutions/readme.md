@@ -1084,3 +1084,20 @@ class Solution {
 }
 
 ```
+
+<h1>Searching</h1>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/number-of-occurrence2259">Problem 1</a></h3>
+```java
+class Solution {
+    int countFreq(int[] arr, int target) {
+        // code here
+        int count = 0;
+        for (int i = 0;i<arr.length;i++){
+            if(arr[i] == target){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+```
