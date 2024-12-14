@@ -1141,3 +1141,45 @@ class Solution {
         return arr[lo]; 
     }
 ```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/search-in-a-rotated-array4618">Problem 3</a></h3>
+
+```js
+class Solution {
+    int search(int[] arr, int key) {
+        // Complete this function
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            // Check if mid is the key
+            if (arr[mid] == key) {
+                return mid;
+            }
+
+            // Left half is sorted
+            if (arr[left] <= arr[mid]) {
+                // Check if key lies within the left half
+                if (key >= arr[left] && key < arr[mid]) {
+                    right = mid - 1; // Narrow down to the left half
+                } else {
+                    left = mid + 1; // Narrow down to the right half
+                }
+            }
+            // Right half is sorted
+            else {
+                // Check if key lies within the right half
+                if (key > arr[mid] && key <= arr[right]) {
+                    left = mid + 1; // Narrow down to the right half
+                } else {
+                    right = mid - 1; // Narrow down to the left half
+                }
+            }
+        }
+
+        // If the key is not found
+        return -1;
+    }
+}
+```
