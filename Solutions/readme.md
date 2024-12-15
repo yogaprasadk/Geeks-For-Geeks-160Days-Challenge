@@ -1183,3 +1183,34 @@ class Solution {
     }
 }
 ```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/peak-element">Problem 4</h3>
+
+```java
+
+class Solution {
+
+    public int peakElement(int[] arr) {
+        // code here
+        int low = 0;
+        int high = arr.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            // Check if arr[mid] is a peak element
+            if ((mid == 0 || arr[mid - 1] <= arr[mid]) && (mid == arr.length - 1 || arr[mid + 1] <= arr[mid])) {
+                return mid;
+            }
+            // If the left neighbor is greater, the peak lies on the left half
+            else if (mid > 0 && arr[mid - 1] > arr[mid]) {
+                high = mid - 1;
+            }
+            // If the right neighbor is greater, the peak lies on the right half
+            else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+}
+```
