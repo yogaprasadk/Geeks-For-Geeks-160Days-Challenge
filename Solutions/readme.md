@@ -1213,7 +1213,7 @@ class Solution {
         return -1;
     }
 }
-```
+``
 
 if (a.length > b.length) {
             return kthElement(b, a, k);
@@ -1243,3 +1243,49 @@ if (a.length > b.length) {
         }
         
         throw new IllegalArgumentException("Invalid input");
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/aggressive-cows">Problem 6</a>
+
+class Solution {
+    
+    public static int aggressiveCows(int[] stalls, int k) {
+        Arrays.sort(stalls); // Step 1: Sort the stall positions
+        
+        int low = 1; // Minimum possible distance
+        int high = stalls[stalls.length - 1] - stalls[0]; // Maximum possible distance
+        int result = 0;
+        
+        // Step 2: Binary Search to find the maximum minimum distance
+        while (low <= high) {
+            int mid = low + (high - low) / 2; // Calculate the mid distance
+            
+            if (canPlaceCows(stalls, k, mid)) {
+                result = mid;  // Update result if placement is possible
+                low = mid + 1; // Try for a larger minimum distance
+            } else {
+                high = mid - 1; // Try for a smaller minimum distance
+            }
+        }
+        
+        return result;
+    }
+    
+    private static boolean canPlaceCows(int[] stalls, int k, int distance) 
+    {
+        int cowsPlaced = 1; // Place the first cow in the first stall
+        int lastPosition = stalls[0];
+        
+        for (int i = 1; i < stalls.length; i++) {
+            if (stalls[i] - lastPosition >= distance) {
+                cowsPlaced++; // Place the next cow
+                lastPosition = stalls[i]; // Update the last position
+            }
+            
+            if (cowsPlaced == k) {
+                return true; // All cows have been placed successfully
+            }
+        }
+        
+        return false; // Not enough cows placed
+    }
+    
