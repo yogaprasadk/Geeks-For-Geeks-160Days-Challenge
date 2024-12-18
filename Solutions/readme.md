@@ -1213,8 +1213,11 @@ class Solution {
         return -1;
     }
 }
-``
+```
 
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/k-th-element-of-two-sorted-array1317"></a>Problem 5</h3>
+
+```java
 if (a.length > b.length) {
             return kthElement(b, a, k);
         }
@@ -1243,9 +1246,10 @@ if (a.length > b.length) {
         }
         
         throw new IllegalArgumentException("Invalid input");
-
+```
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/aggressive-cows">Problem 6</a>
 
+```java
 class Solution {
     
     public static int aggressiveCows(int[] stalls, int k) {
@@ -1288,4 +1292,64 @@ class Solution {
         
         return false; // Not enough cows placed
     }
-    
+
+```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/allocate-minimum-number-of-pages0937">Problem 7</a></h3>
+
+```js
+
+class Solution {
+    public static int findPages(int[] arr, int k) {
+        // code here
+        if (arr.length < k) {
+            return -1;
+        }
+
+        // Calculate the sum of pages and maximum pages
+        int sum = 0;
+        int maxPages = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            maxPages = Math.max(maxPages, arr[i]);
+        }
+
+        // Binary search to find the minimum possible maximum pages
+        int low = maxPages, high = sum, result = -1;
+        
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            // Check if it's possible to allocate books such that no student gets more than `mid` pages
+            if (isPossible(arr, k, mid)) {
+                result = mid;  // If it's possible, try to minimize the result
+                high = mid - 1;  // Try for smaller maximum pages
+            } else {
+                low = mid + 1;  // Increase the maximum pages
+            }
+        }
+        return result;
+    }
+
+    // Helper function to check if it's possible to allocate books with the max pages constraint
+    private static boolean isPossible(int[] arr, int k, int maxPages) {
+        int studentsRequired = 1;  // Start with the first student
+        int currentPages = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            // If adding this book exceeds the maxPages for the current student
+            if (currentPages + arr[i] > maxPages) {
+                studentsRequired++;  // Allocate to the next student
+                currentPages = arr[i];  // Start with this book for the new student
+                
+                // If we exceed the number of students, it's not possible
+                if (studentsRequired > k) {
+                    return false;
+                }
+            } else {
+                currentPages += arr[i];  // Add this book to the current student
+            }
+        }
+        return true;
+    }
+}
+```
