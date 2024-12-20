@@ -1382,3 +1382,54 @@ class Solution {
     }
 }
 ```
+
+<h1>Matrix</h1>
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/spirally-traversing-a-matrix-1587115621"></h3>
+
+```js
+class Solution {
+    // Function to return a list of integers denoting spiral traversal of matrix.
+    public ArrayList<Integer> spirallyTraverse(int mat[][]) {
+        // code here
+            ArrayList<Integer> result = new ArrayList<>();
+        
+        int n = mat.length;     // number of rows
+        int m = mat[0].length;  // number of columns
+        
+        int top = 0, bottom = n - 1, left = 0, right = m - 1;
+        
+        while (top <= bottom && left <= right) {
+            // Traverse from left to right along the top row
+            for (int i = left; i <= right; i++) {
+                result.add(mat[top][i]);
+            }
+            top++;
+            
+            // Traverse from top to bottom along the right column
+            for (int i = top; i <= bottom; i++) {
+                result.add(mat[i][right]);
+            }
+            right--;
+            
+            // Traverse from right to left along the bottom row
+            if (top <= bottom) { // Check if there are rows remaining
+                for (int i = right; i >= left; i--) {
+                    result.add(mat[bottom][i]);
+                }
+                bottom--;
+            }
+            
+            // Traverse from bottom to top along the left column
+            if (left <= right) { // Check if there are columns remaining
+                for (int i = bottom; i >= top; i--) {
+                    result.add(mat[i][left]);
+                }
+                left++;
+            }
+        }
+        
+        return result;
+    }
+}
+
+```
