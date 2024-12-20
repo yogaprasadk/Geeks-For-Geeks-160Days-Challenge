@@ -1353,3 +1353,32 @@ class Solution {
     }
 }
 ```
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/searching-gfg-160/problem/kth-missing-positive-number-in-a-sorted-array">Problem 8</a></h3>
+
+```java
+class Solution {
+    public int kthMissing(int[] arr, int k) {
+        // code here
+        int n = arr.length;
+        int missing_count = 0;
+        int i = 0;
+        int current = 1;  // Start checking from the number 1
+
+        while (i < n) {
+            if (arr[i] != current) {
+                missing_count++;
+                if (missing_count == k) {
+                    return current;
+                }
+            } else {
+                i++;
+            }
+            current++;
+        }
+
+        // If we exit the loop, it means the kth missing number is after the last element of arr[]
+        return arr[n - 1] + (k - missing_count);
+        
+    }
+}
+```
