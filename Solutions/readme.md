@@ -1433,3 +1433,38 @@ class Solution {
 }
 
 ```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/rotate-by-90-degree-1587115621">Problem 2</a></h3>
+
+```java
+class Solution {
+    // Function to rotate matrix anticlockwise by 90 degrees.
+    static void rotateby90(int mat[][]) {
+        // code here
+        int n = mat.length;
+
+        // Step 1: Transpose the matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                // Swap mat[i][j] with mat[j][i]
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+
+        // Step 2: Reverse each column
+        for (int j = 0; j < n; j++) {
+            int start = 0, end = n - 1;
+            while (start < end) {
+                // Swap mat[start][j] with mat[end][j]
+                int temp = mat[start][j];
+                mat[start][j] = mat[end][j];
+                mat[end][j] = temp;
+                start++;
+                end--;
+            }
+        }
+    }
+}
+```
