@@ -1468,3 +1468,30 @@ class Solution {
     }
 }
 ```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/search-in-a-matrix17201720">Problem 3 </a></h3>
+
+```java
+class Solution {
+    public static boolean matSearch(int mat[][], int x) {
+        // your code here
+         int n = mat.length;    // Number of rows
+        int m = mat[0].length; // Number of columns
+        
+        // Start from top-right corner of the matrix
+        int i = 0, j = m - 1;
+        
+        while (i < n && j >= 0) {
+            if (mat[i][j] == x) {
+                return true;  // Element found
+            } else if (mat[i][j] < x) {
+                i++;  // Move down
+            } else {
+                j--;  // Move left
+            }
+        }
+        
+        return false;  // Element not found
+    }
+}
+```
