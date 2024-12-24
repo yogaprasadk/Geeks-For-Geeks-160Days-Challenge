@@ -1495,3 +1495,27 @@ class Solution {
     }
 }
 ```
+
+
+public boolean searchMatrix(int[][] mat, int x) {
+    int n = mat.length; // number of rows
+    int m = mat[0].length; // number of columns
+    
+    // Binary search over the entire matrix
+    int low = 0, high = n * m - 1;
+    
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int midElement = mat[mid / m][mid % m];
+        
+        if (midElement == x) {
+            return true; // Found the element
+        } else if (midElement < x) {
+            low = mid + 1; // Search in the right half
+        } else {
+            high = mid - 1; // Search in the left half
+        }
+    }
+    
+    return false; // Element not found
+}
