@@ -1,3 +1,5 @@
+
+
 <h1>Array</h1>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem 1</a></h3>
 
@@ -1518,4 +1520,70 @@ public boolean searchMatrix(int[][] mat, int x) {
     }
     
     return false; // Element not found
+}
+public void setMatrixZeroes(int[][] mat) {
+    int n = mat.length;
+    int m = mat[0].length;
+
+    // Use variables to track if the first row and first column need to be set to zero
+    boolean firstRowZero = false;
+    boolean firstColZero = false;
+
+    // Check if the first row has any zeros
+    for (int j = 0; j < m; j++) {
+        if (mat[0][j] == 0) {
+            firstRowZero = true;
+            break;
+        }
+    }
+
+    // Check if the first column has any zeros
+    for (int i = 0; i < n; i++) {
+        if (mat[i][0] == 0) {
+            firstColZero = true;
+            break;
+        }
+    }
+
+    // Use first row and first column to mark zeros
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < m; j++) {
+            if (mat[i][j] == 0) {
+                mat[i][0] = 0;
+                mat[0][j] = 0;
+            }
+        }
+    }
+
+    // Zero out rows based on markers in the first column
+    for (int i = 1; i < n; i++) {
+        if (mat[i][0] == 0) {
+            for (int j = 1; j < m; j++) {
+                mat[i][j] = 0;
+            }
+        }
+    }
+
+    // Zero out columns based on markers in the first row
+    for (int j = 1; j < m; j++) {
+        if (mat[0][j] == 0) {
+            for (int i = 1; i < n; i++) {
+                mat[i][j] = 0;
+            }
+        }
+    }
+
+    // Zero out the first row if needed
+    if (firstRowZero) {
+        for (int j = 0; j < m; j++) {
+            mat[0][j] = 0;
+        }
+    }
+
+    // Zero out the first column if needed
+    if (firstColZero) {
+        for (int i = 0; i < n; i++) {
+            mat[i][0] = 0;
+        }
+    }
 }
