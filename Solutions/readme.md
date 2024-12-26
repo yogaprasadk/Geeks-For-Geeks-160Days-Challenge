@@ -1,5 +1,3 @@
-
-
 <h1>Array</h1>
 <h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/second-largest3735">Problem 1</a></h3>
 
@@ -1498,7 +1496,9 @@ class Solution {
 }
 ```
 
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/search-in-a-row-wise-sorted-matrix">Problem 4</a></h3>
 
+```js
 public boolean searchMatrix(int[][] mat, int x) {
     int n = mat.length; // number of rows
     int m = mat[0].length; // number of columns
@@ -1521,6 +1521,11 @@ public boolean searchMatrix(int[][] mat, int x) {
     
     return false; // Element not found
 }
+```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/search-in-a-matrix-1587115621">PRoblem 5</a></h3>
+
+```js
 public void setMatrixZeroes(int[][] mat) {
     int n = mat.length;
     int m = mat[0].length;
@@ -1586,4 +1591,64 @@ public void setMatrixZeroes(int[][] mat) {
             mat[i][0] = 0;
         }
     }
-}
+```
+
+<h3><a href="https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/search-in-a-matrix-1587115621">Problem 6</a></h3>
+
+```js
+int n = mat.length;
+        int m = mat[0].length;
+
+        // Variables to check if the first row or first column needs to be zeroed
+        boolean firstRowZero = false;
+        boolean firstColZero = false;
+
+        // Check if the first row contains a zero
+        for (int j = 0; j < m; j++) {
+            if (mat[0][j] == 0) {
+                firstRowZero = true;
+                break;
+            }
+        }
+
+        // Check if the first column contains a zero
+        for (int i = 0; i < n; i++) {
+            if (mat[i][0] == 0) {
+                firstColZero = true;
+                break;
+            }
+        }
+
+        // Use the first row and first column to mark rows and columns to be zeroed
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < m; j++) {
+                if (mat[i][j] == 0) {
+                    mat[i][0] = 0; // Mark the first column
+                    mat[0][j] = 0; // Mark the first row
+                }
+            }
+        }
+
+        // Zero out cells based on the marks in the first row and first column
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < m; j++) {
+                if (mat[i][0] == 0 || mat[0][j] == 0) {
+                    mat[i][j] = 0;
+                }
+            }
+        }
+
+        // Zero out the first row if needed
+        if (firstRowZero) {
+            for (int j = 0; j < m; j++) {
+                mat[0][j] = 0;
+            }
+        }
+
+        // Zero out the first column if needed
+        if (firstColZero) {
+            for (int i = 0; i < n; i++) {
+                mat[i][0] = 0;
+            }
+        }
+```
